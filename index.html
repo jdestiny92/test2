@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
+ 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
   <style>
   body {
-      font: 20px Montserrat, sans-serif;
+      font: 20px;
+      font-family: 'Fira Sans';
       line-height: 1.8;
       color: #f5f6f7;
   }
+
   p {font-size: 16px;}
+
   .margin {margin-bottom: 45px;}
+
   .bg-1 {
       background-color: #EAE5E5; /* Grey */
       color: black;
@@ -46,15 +50,65 @@
       font-size: 12px;
       letter-spacing: 5px;
   }
+
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
-  .footerElement{
-
-  }
+  
   .pic{
     width: 7vw;
   }
+
+  .img-responsive{
+    margin: auto;
+  }
+  .carousel-control{
+    opacity: .5;
+  }
+
+  section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.quote {
+    color: rgba(0,0,0,.1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#fade-quote-carousel.carousel {
+  padding-bottom: 60px;
+}
+#fade-quote-carousel.carousel .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-inner .active {
+  opacity: 1;
+  -webkit-transition-property: opacity;
+      -ms-transition-property: opacity;
+          transition-property: opacity;
+}
+#fade-quote-carousel.carousel .carousel-indicators {
+  bottom: 10px;
+}
+#fade-quote-carousel.carousel .carousel-indicators > li {
+  background-color: #e84a64;
+  border: none;
+}
+#fade-quote-carousel blockquote {
+    text-align: center;
+    border: none;
+}
+#fade-quote-carousel .profile-circle {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 100px;
+}
   </style>
 </head>
 <body>
@@ -74,21 +128,21 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#testomonials">Testomonials</a></li>
+        <li><a href="#testomonials">Testimonials</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- First Container -->
+<!-- Intro -->
 <div class="container-fluid bg-1 text-center">
   <h3 class="margin">Julian Biebelberg</h3>
-  <img src="updatedPic.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <img src="public/updatedPic.png" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
   <h3>Full Stack Javascript Developer</h3>
 </div>
 
-<!-- Second Container -->
+<!-- About -->
 <div class="container-fluid bg-2 text-center">
   <h3 class="margin" id="about">A Bit About Me   :</h3>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -97,28 +151,147 @@
   </a>
 </div>
 
-<!-- Third Container -->
+<!-- Portfolio -->
 <div class="container-fluid bg-3 text-center">
   <h3 class="margin" id="portfolio">Some of My Notable Creations   :</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-  <a href="#" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-search"></span> Search
-  </a>
+    <div class="row row-content"><div class="col-xs-12">
+        <div id="mycarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+                <ol class="carousel-indicators hidden">
+                    <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#mycarousel" data-slide-to="1"></li>
+                    <li data-target="#mycarousel" data-slide-to="2"></li>
+                </ol>
+    <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img class="img-responsive"
+                         src="public/matchingGame.jpg" alt="Matching Game">
+                        <div class="carousel-caption">
+                        <h2 style="color:brown; font-weight:bold;">Matching Game</h2>
+                        <p><a target="_blank" class="btn btn-primary btn-xs" href="public/matching_game.html" data-content="A picture matching game, built after a month of learning how to code, using html, css, and javascript. A top score element was added later using firebase." data-placement="top" title="Matching Game" data-trigger="hover">Check It Out! &raquo;</a></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="public/hangman.jpg" alt="Hangman RPG">
+                    <div class="carousel-caption">
+                        <h2>Hangman RPG</h2>
+                        <p><a target="_blank" class="btn btn-primary btn-xs" href="https://rcb-hangman.herokuapp.com" data-content="An interactive hangman game in the style of an old school role playing game. Made using html, css, and javascript." data-placement="top" title="Hangman Game" data-trigger="hover">Check It Out! &raquo;</a></p>  
+                    </div>
+                    </div>
+                    <div class="item">
+                        <img class="img-responsive" src="public/marvel.jpg" alt="Marvel Turn Based RPG">
+                        <div class="carousel-caption">
+                        <h2>Marvel Turn Based RPG</h2>
+                        <p><a target="_blank" class="btn btn-primary btn-xs" href="https://marvel-jquery-rpg.herokuapp.com" data-content="A turn based role playing game based off the Marvel Universe, built using html, css, and jquery. Features include: dynamically changing health, multiple allies and enemies, critical hits, and win/lose scenerios." data-placement="top" title="Marvel Turn Based RPG" data-trigger="hover">Check It Out! &raquo;</a></p>
+                    </div>
+                    </div>
+
+                     <div class="item">
+                        <img class="img-responsive" src="public/trivia.jpg" alt="Anime Trivia Game">
+                        <div class="carousel-caption">
+                        <h2>Anime Trivia Game</h2>
+                        <p><a target="_blank" class="btn btn-primary btn-xs" href="https://otaku-trivia-game.herokuapp.com" data-content="A trivia game featuring dynamically changing components and counter system. Made using html, css, and jquery." data-placement="top" title="Anime Trivia Game" data-trigger="hover">Check It Out! &raquo;</a></p>
+                    </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive" src="public/textingApp.jpg" alt="Mobile Texting Application">
+                        <div class="carousel-caption">
+                        <h2 style="color:black">Mobile Texting Application</h2>
+                        <p><a target="_blank" class="btn btn-primary btn-xs" href="https://rcbtext.herokuapp.com/" data-content="A mobile texting application made using Ionic Framework, Angular Js, Firebase, and AngularFire. Displays a dynamic chat feed as well as a GIF adding feature." data-placement="top" title="Mobile Texting App" data-trigger="hover">Check It Out! &raquo;</a></p>
+                    </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="img-responsive" src="public/timeHub.jpg" alt="TimeHub Application">
+                        <div class="carousel-caption">
+                        <h2 style="color:yellow; font-weight:bold;">TimeHub Application</h2>
+                        <p><a target="_blank" class="btn btn-primary btn-xs" href="https://time-hub.herokuapp.com/" data-content="A work efficiency tracker made for organizations with routine daily tasks. Presents employees with an interface which displays tasks and tracks the time done for each. For each task completion time, it is charted into a bar graph, with the manager’s expected time. Also allows user registration and authenticaiton." data-placement="top" title="TimeHub" data-trigger="hover">Check It Out! &raquo;</a></p>
+                    </div>
+                    </div>
+
+                     <div class="item">
+                        <img class="img-responsive" src="public/survey.jpg" alt="RPG Character Survey Application">
+                        <div class="carousel-caption">
+                        <h2 style="color:black; font-weight:bold;">RPG Character Survey Application</h2>
+                        <p><a target="_blank" class="btn btn-primary btn-xs" href="https://character-survey.herokuapp.com/" data-content="A survey application determing one's character in a role playing game due to personality and choices. Made using jquery, node js, and express js." data-placement="top" title="Character Survey Application" data-trigger="hover">Check It Out! &raquo;</a></p>
+                    </div>
+                    </div>
+
+                     <div class="item">
+                        <img class="img-responsive" src="public/pokemon.jpg" alt="Pokemon Game Application">
+                        <div class="carousel-caption">
+                        <h2 style="color:white; font-weight:bold;">Pokemon Game Application</h2>
+                        <p><a target="_blank" class="btn btn-primary btn-xs" href="https://pokemon-application.herokuapp.com/" data-content="A pokemon game allowing one to catch every pokemon via random generation and then is stored to see later. Made using jquery, node js, express js, handlebars js, and mysql." data-placement="top" title="Pokemon Game" data-trigger="hover">Check It Out! &raquo;</a></p>
+                    </div>
+                    </div>
+                </div>
+
+      <!-- Controls -->
+                <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+         
+   
+            </div>
+  </div>
+  </div>
 </div>
 
-<!-- Fourth Container -->
+<!-- Testomonials -->
 <div class="container-fluid bg-4 text-center">
   <h3 class="margin" id="testomonials">What do People Have to Say?</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-  <a href="#" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-search"></span> Search
-  </a>
+    <section id="carousel">           
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+              <!-- Carousel indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+                    <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+                  </ol>
+
+          <!-- Carousel items -->
+          <div class="carousel-inner">
+            <div class="active item">
+                        <div><img src="public/chris.jpg" style="width:40%;"></div>
+              <blockquote>
+                <p>"Knowing Julian for the passed 6 months, I can say I've been inspired by his motivation to be succesful as a developer. Before his cohort began he had already taught himself angular and built a few apps using the framework. All throughout the bootcamp he demonstrated an intense desire to learn, enduring positive attitude, and openness to feedback that many new developers with his level of skill tend to lack. It is my sincere opinion that he possesses all of the qualities and aptitudes that would would make him a fantastic addition to any development team."
+                <br><br>- Christian | Software Developer</p>
+              </blockquote> 
+            </div>
+            <div class="item">
+                        <div><img src="public/matt.jpg" style="width: 40%;"></div>
+              <blockquote>
+                <p>"Julian has proven himself to be an excellent student who excels because he constantly seeks to improve his skill set.  He has the necessary curiosity that is required to be an effective web developer.  I am impressed by his perseverance; he approached each topic addressed in class with a positive attitude and a willingness to learn."
+                <br><br>- Matthew | Software Engineer</p>
+              </blockquote>
+            </div>
+            <div class="item">
+                        <div><img src="public/pharm1.png" style="width: 40%;"></div>
+              <blockquote>
+                <p>"Julian is a hard working young man, whose work ethic is matched by his professional demeanor. His politeness and intellectualism aids in portraying the workplace in a positive light towards patients. He has the aptitude and perserverance to excel and better any company he chooses to work for in the future."
+                <br><br>- Ada | Pharmacy Manager</p>
+              </blockquote>
+            </div>
+      </div>              
+    </div>
+  </div>
+</section>
 </div>
 
-<!-- Fifth Container -->
+<!-- Contact -->
 <div class="container-fluid bg-1 text-center">
   <h3 class="margin" id="contact">Feel Free To Leave a Message!</h3>
-  <img src="contact.jpg" />
+  <img src="public/contact.jpg" />
 </div>
 
 <!-- Footer -->

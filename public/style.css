@@ -1,0 +1,195 @@
+
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100vh;
+}
+#wrapper {
+	min-height:100vh;
+	position:relative;
+	background:#EAE5E5;
+}
+
+#header {
+	background:#EAE5E5;
+	padding:10px;
+	
+}
+#content {
+	padding-bottom:14.2vh;
+	background:#EAE5E5;
+	
+}
+#footer {
+	background:#3A59AA;
+	width:100vw;
+	height:14.2vh;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+.footerElement {
+	color: white;
+	float: left;
+	margin-left: 10vw;
+	
+}
+
+.glyphicon {
+	float: left;
+	margin-right: 5px;
+}
+
+#three {
+	width: 14.6vw;
+	margin-top: 5px;
+}
+
+img {
+	width: 3.7vw;
+}
+
+#four {
+	width: 22vw;
+	margin-top: 4.2vh;
+	margin-left: 7.5vw;
+}
+
+#one, #two {
+	margin-top: 2.8vh;
+}
+
+p {
+	font-family: 'Fira Sans';
+}
+
+#title {
+	margin-left: 20vw;
+}
+
+#links {
+	margin-right: 10vw;
+}
+
+li {
+	font-size: 25px;
+	font-style: italic;
+	margin-top: 10%;
+}
+
+#contact {
+	width: 36.6vw;
+	margin-left: 29.3vw;
+	margin-top: 6vh;
+}
+
+
+#mainPic {
+	margin-left: 20vw;
+	margin-top: 9vh;
+	height: 42.5vh;
+	width: 22vw;
+}
+
+#intro {
+	float: right;
+	margin-right: 30vw;
+	font-style: italic;
+	
+}
+
+#circle1 {
+	position: absolute;
+	width: 18vw;
+	left: 48vw;
+	bottom: 33vh;
+	
+}
+
+#circle1:hover {
+	-webkit-filter: drop-shadow(10px 10px 10px blue); /* Chrome, Safari, Opera */
+    filter: drop-shadow(10px 10px 10px blue);
+}
+
+#circle2:hover {
+	-webkit-filter: drop-shadow(10px 10px 10px red); /* Chrome, Safari, Opera */
+    filter: drop-shadow(10px 10px 10px red);
+}
+
+#circle3:hover {
+	-webkit-filter: drop-shadow(10px 10px 10px yellow); /* Chrome, Safari, Opera */
+    filter: drop-shadow(10px 10px 10px yellow);
+}
+
+#circle2 {
+	position: absolute;
+	width: 18vw;
+	left: 61vw;
+	bottom: 33vh;
+	
+}
+
+#circle3 {
+	position: absolute;
+	width: 18vw;
+	left: 74vw;
+	bottom: 33vh;
+	
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin:auto;
+
+  }
+  
+  #mycarousel {
+  	position:relative; width:70vw; margin:auto; margin-bottom:4.2vh;
+  }
+
+  .item{
+  	background-color:#EAE5E5;
+  }
+
+
+#form {
+	margin-left: 30%;
+	width: 500px;
+	border: 2px solid black;
+	font-size: 15px;
+}
+
+.input {
+	width:100%;
+}
+
+ textarea {
+ 	width:100%; 
+ 	height:200px;
+ }
+
+ .submit {
+ 	color:white; 
+ 	background-color:#4aaaaf; 
+ 	font-size:20px;
+ }
+
+ .carousel-control.left, .carousel-control.right {
+    opacity: 0;
+}
+
+.carousel-control.left:hover, .carousel-control.right:hover {
+    opacity: 0;
+}
+
+.popover-content {
+	color: black;
+}
+
+.popover-title {
+	color: black;
+	font-weight: bold;
+}
